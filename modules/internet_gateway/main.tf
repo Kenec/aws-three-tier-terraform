@@ -5,3 +5,7 @@ resource "aws_internet_gateway" "internet-gateway" {
     Name = "Internet-GW"
   }
 }
+
+output "gateway_id" {
+  value = "${aws_internet_gateway.internet-gateway.id}"
+}
